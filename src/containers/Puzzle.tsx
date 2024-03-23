@@ -26,7 +26,7 @@ function Puzzle(){
           imageSrc={PuzzleImg}
           rows={2}
           columns={3}
-          onSolved={()=>navigate("/intro")}
+          onSolved={()=>navigate("/home")}
         />
       </Box>
     </Container>

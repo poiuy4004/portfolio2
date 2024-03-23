@@ -2,7 +2,7 @@ const frontendSkills = [
     {name: "Next", imageUrl: "https://seeklogo.com/images/N/next-js-logo-7929BCD36F-seeklogo.com.png"},
     {name: "React", imageUrl: "https://seeklogo.com/images/R/react-logo-7B3CE81517-seeklogo.com.png"},
     {name: "React-Native", imageUrl: "https://seeklogo.com/images/R/react-native-logo-221C671C70-seeklogo.com.png"},
-    {name: "TS", imageUrl: "https://seeklogo.com/images/T/typescript-logo-B29A3F462D-seeklogo.com.png"},
+    {name: "Typescript", imageUrl: "https://seeklogo.com/images/T/typescript-logo-B29A3F462D-seeklogo.com.png"},
     {name: "Flutter", imageUrl: "https://seeklogo.com/images/F/flutter-logo-5086DD11C5-seeklogo.com.png"},
     {name: "Vue", imageUrl: "https://seeklogo.com/images/V/vuejs-logo-17D586B587-seeklogo.com.png"},
   ]

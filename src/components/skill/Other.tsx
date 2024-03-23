@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const Container = styled.div`
+const Container = styled.li`
   display: flex;
   flex-direction: column;
   row-gap: 1vw;

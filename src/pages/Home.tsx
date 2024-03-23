@@ -5,10 +5,13 @@ import Nav from "../components/layouts/Nav";
 import SkillContainer from "../containers/SkillContainer";
 import ProjectContainer from "../containers/ProjectContainer";
 
+import ContactContainer from "../containers/ContactContainer";
+
 const Container = styled.main`
-  padding: 1vh 22vw;
+  padding: 3vw 22vw;
   display: flex;
   flex-direction: column;
+  row-gap: 6vw;
   &>article{
     max-height: 100vh;
     max-width: 100vw;
@@ -30,6 +33,7 @@ function Home() {
       <NavBox><Nav isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} /></NavBox>
       <SkillContainer />
       <ProjectContainer isProjectSection={isProjectSection} />
+      <ContactContainer isProjectSection={isProjectSection} />
     </Container>
   );
 }

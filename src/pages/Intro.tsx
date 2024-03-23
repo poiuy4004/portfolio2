@@ -30,14 +30,14 @@ function Intro(){
   const [openModal, setOpenModal] = useState(true);
   useEffect(()=>{
     if(window.innerWidth<1025){
-      navigate("/intro")
+      navigate("/home")
     }
   },[])
   return (
     <Container>
       <Puzzle />
-      <Skip onClick={()=>navigate("/intro")}>퍼즐 건너뛰기 ►</Skip>
-      {openModal? <Modal titleText="퍼즐을 맞춰보세요!" contentText="퍼즐을 맞추고 포트폴리오를 확인하세요!" rightButtonText="닫기" rightButtonFn={setOpenModal} /> : null}
+      <Skip onClick={()=>navigate("/home")}>퍼즐 건너뛰기 ►</Skip>
+      {openModal&&<Modal titleText="퍼즐을 맞춰보세요!" contentText="퍼즐을 맞추고 포트폴리오를 확인하세요!" rightButtonText="닫기" rightButtonFn={setOpenModal} />}
     </Container>
   );
 }

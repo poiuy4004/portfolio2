@@ -5,7 +5,6 @@ import Other from "../components/skill/Other";
 import { frontendSkills, backendSkills, otherSkills } from "../constants/skill";
 
 const Container = styled.article`
-  padding: 3vw;
 `
 const Box = styled.section`
   display: flex;
@@ -32,11 +31,12 @@ const SectionBox = styled.p`
     border-bottom-right-radius: 999px;
   }
 `
-const SkillBox = styled.section`
+const SkillBox = styled.ul`
   padding: 2vw;
   display: flex;
   flex-direction: column;
   row-gap: 1vw;
+  list-style: none;
 `
 const OtherBox = styled(SkillBox)`
   padding: 3vh;
@@ -47,7 +47,7 @@ const OtherBox = styled(SkillBox)`
 
 function SkillContainer(){
   return(
-    <Container>
+    <Container id="skill">
       <Box>
         <DevSkillBox>
           <SectionBox>

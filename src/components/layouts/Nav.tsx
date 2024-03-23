@@ -1,28 +1,30 @@
 import styled from "styled-components";
 
 const NavBox = styled.ul`
-  &>:nth-child(${props=>props.itemProp}){
-    border-radius: 500px;
-    background-color: rgba(0, 128, 0, .2);
+  & *{
+    text-decoration: none;
   }
-  &>:nth-child(3){
-    border-radius: 50px;
+  &>:nth-child(${props=>props.className})>*{
+    border-radius: 500px !important;
+    background-color: rgba(0, 128, 0, .2) !important;
+  }
+  &>:nth-child(3)>*{
+    border-radius: 30px !important;
   }
 `
-const NavButton = styled.button`
-  padding: 1vw;
-  font-size: 3vw;
-  font-weight: 100;
+const NavButton = styled.li`
+  padding: 1vw !important;
+  color: black;
+  font-size: 3vw !important;
+  font-weight: 100 !important;
+  text-decoration: none;
 `
 const ProjectBox = styled.ul`
   padding-left: 3vw;
   &>:nth-child(${props=>(props.itemProp?.[0]==="3")? (props.itemProp?.[2]) : 99}){
-    color: blue;
-    &>button{
-      text-decoration: underline solid yellow 5px;
-    }
+    color: rgb(0, 0, 128);
+    text-decoration: underline solid yellow 5px !important;
   }
-
 `
 
 type NavType = {
@@ -34,18 +36,17 @@ type NavType = {
 function Nav({isPage, setIsPage, isProjectSection, setIsProjectSection}:NavType){
   return(
     <nav>
-      <NavBox itemProp={String(isPage)}>
-        <li><NavButton onClick={e=>setIsPage(1)}>Intro</NavButton></li>
-        <li><NavButton onClick={e=>setIsPage(2)}>Skill</NavButton></li>
-        <li>
-          <h5><NavButton onClick={e=>setIsPage(3)}>Project</NavButton></h5>
+      <NavBox className={String(isPage)}>
+        <a href="#intro" onClick={e=>setIsPage(1)}><NavButton>Intro</NavButton></a>
+        <a href="#skill" onClick={e=>setIsPage(2)}><NavButton>Skill</NavButton></a>
+        <a href="#project" onClick={e=>setIsPage(3)}><NavButton>Project
           <ProjectBox itemProp={isPage+" "+isProjectSection}>
-            <li><NavButton onClick={e=>setIsProjectSection(1)}>⋯ing</NavButton></li>
-            <li><NavButton onClick={e=>setIsProjectSection(2)}>Web</NavButton></li>
-            <li><NavButton onClick={e=>setIsProjectSection(3)}>App</NavButton></li>
+            <NavButton onClick={e=>setIsProjectSection(1)}>Web</NavButton>
+            <NavButton onClick={e=>setIsProjectSection(2)}>App</NavButton>
+            <NavButton onClick={e=>setIsProjectSection(3)}>⋯ing</NavButton>
           </ProjectBox>
-        </li>
-        <li><NavButton onClick={e=>setIsPage(4)}>Contact</NavButton></li>
+        </NavButton></a>
+        <a href="#contact" onClick={e=>setIsPage(4)}><NavButton>Contact</NavButton></a>
       </NavBox>
     </nav>
   )

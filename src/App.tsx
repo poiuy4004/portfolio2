@@ -7,7 +7,7 @@ import Gugi from "./assets/fonts/Gugi.ttf";
 import MarBoDan from "./assets/fonts/MarBoDan.ttf";
 import Round from "./assets/fonts/Round.ttf";
 
-import Intro from './pages/Imtro';
+import Intro from './pages/Intro';
 import Home from './pages/Home';
 
 const GlobalStyle = createGlobalStyle`
@@ -36,14 +36,10 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
   }
   a{
-    color: black;
-    text-decoration: none;
     font-family: "Gugi";
   }
   button{
-    border: none;
     font-family: "Gugi";
-    background-color: transparent;
     cursor: pointer;
   }
 `
@@ -53,7 +49,7 @@ function App() {
     <BrowserRouter>
       <GlobalStyle />
       <Routes>
-        <Route path='/*' Component={Home} />
+        <Route path='/*' Component={Intro} />
         <Route path='/' Component={Intro} />
         <Route path='/home' Component={Home} />
       </Routes>

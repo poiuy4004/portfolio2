@@ -47,6 +47,11 @@ const RightButton = styled.button`
   right: 0;
   border-radius: 0 14px 14px 0;
   background: linear-gradient(to left, rgb(222, 222, 222), white);
+  animation: ${props=>props.className==="0"? "RightButton .8s infinite" : null };
+  @keyframes RightButton {
+    0%{transform: translateX(-10%) scaleX(120%);}
+    100%{transform: translateX(10%) scaleX(120%);}
+  }
   &:hover{
     background: linear-gradient(to left, rgb(180, 180, 180), white);
   }
@@ -60,27 +65,27 @@ function ProjectContainer({isProjectSection}:ProjectContainerType){
   const [isAppPageNumber,setIsAppPageNumber] = useState<number>(0);
   const [isIngPageNumber,setIsIngPageNumber] = useState<number>(0);
   return(
-    <Container id="#project" className={String(isProjectSection)}>
+    <Container id="project" className={String(isProjectSection)}>
       <Box>
         <ProjectBox className={String(isWebPageNumber)}>
           {web.map(project=><Project project={project} />)}
         </ProjectBox>
         <LeftButton onClick={e=>isWebPageNumber-1>0? setIsWebPageNumber(isWebPageNumber-1) : setIsWebPageNumber(0)}>&lt;</LeftButton>
-        <RightButton onClick={e=>isWebPageNumber<web.length-1? setIsWebPageNumber(isWebPageNumber+1) : setIsWebPageNumber(web.length-1)}>&gt;</RightButton>
+        <RightButton className={String(isWebPageNumber)} onClick={e=>isWebPageNumber<web.length-1? setIsWebPageNumber(isWebPageNumber+1) : setIsWebPageNumber(web.length-1)}>&gt;</RightButton>
       </Box>
       <Box>
         <ProjectBox className={String(isAppPageNumber)}>
           {app.map(project=><Project project={project} />)}
         </ProjectBox>
         <LeftButton onClick={e=>isAppPageNumber-1>0? setIsAppPageNumber(isAppPageNumber-1) : setIsAppPageNumber(0)}>&lt;</LeftButton>
-        <RightButton onClick={e=>isAppPageNumber<app.length-1? setIsAppPageNumber(isAppPageNumber+1) : setIsAppPageNumber(app.length-1)}>&gt;</RightButton>
+        <RightButton className={String(isAppPageNumber)} onClick={e=>isAppPageNumber<app.length-1? setIsAppPageNumber(isAppPageNumber+1) : setIsAppPageNumber(app.length-1)}>&gt;</RightButton>
       </Box>
       <Box>
         <ProjectBox className={String(isIngPageNumber)}>
           {ing.map(project=><Project project={project} />)}
         </ProjectBox>
         <LeftButton onClick={e=>isIngPageNumber-1>0? setIsIngPageNumber(isIngPageNumber-1) : setIsIngPageNumber(0)}>&lt;</LeftButton>
-        <RightButton onClick={e=>isIngPageNumber<ing.length-1? setIsIngPageNumber(isIngPageNumber+1) : setIsIngPageNumber(ing.length-1)}>&gt;</RightButton>
+        <RightButton className={String(isIngPageNumber)} onClick={e=>isIngPageNumber<ing.length-1? setIsIngPageNumber(isIngPageNumber+1) : setIsIngPageNumber(ing.length-1)}>&gt;</RightButton>
       </Box>
     </Container>
   )

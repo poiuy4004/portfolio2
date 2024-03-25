@@ -7,7 +7,7 @@ const Container = styled.section`
   padding: 1vw 3vw;
   display: flex;
   flex-direction: column;
-  row-gap: 1vw;
+  row-gap: 2vw;
   text-align: center;
   &>h2{font-size: 2vw;}
 `
@@ -55,7 +55,7 @@ const DetailBox = styled.p`
   padding: 1vw 3vw;
   display: flex;
   flex-direction: column;
-  row-gap: 1vw;
+  row-gap: 1.4vw;
   border-radius: 14px;
   background-color: white;
   &>h3{font-size: 2vw;}
@@ -73,13 +73,13 @@ const DetailBox = styled.p`
 `
 const Skill = styled.li`
   border-radius: 50px;
-  padding: .5vw;
+  padding: .5vw 1vw;
   color: white;
-  font-size: 2vw;
+  font-size: 1vw;
   background-color: rgb(0, 0, 114);
 `
 const DetailImageBox = styled.div`
-  height: 27vw;
+  flex: 1;
   border: dotted 1px gray;
   background-image: url(${props=>props.className});
   background-position-x: center;
@@ -115,6 +115,7 @@ function Project({project}:projectType){
           <ul>
             {project.skill.map(skill=><Skill>{skill}</Skill>)}
           </ul>
+          <desc>아무 곳이나 눌러서 뒤로가기</desc>
         </DetailBox>}
       </Box>
     </Container>

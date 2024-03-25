@@ -2,9 +2,9 @@ import { useState } from "react";
 import styled from "styled-components";
 
 import Nav from "../components/layouts/Nav";
+import IntroContainer from "../containers/IntroContainer";
 import SkillContainer from "../containers/SkillContainer";
 import ProjectContainer from "../containers/ProjectContainer";
-
 import ContactContainer from "../containers/ContactContainer";
 
 const Container = styled.main`
@@ -31,12 +31,11 @@ function Home() {
   return (
     <Container>
       <NavBox><Nav isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} /></NavBox>
+      <IntroContainer />
       <SkillContainer />
       <ProjectContainer isProjectSection={isProjectSection} />
-      <ContactContainer isProjectSection={isProjectSection} />
+      <ContactContainer />
     </Container>
   );
 }
 export default Home;
-
-// "homepage": "https://poiuy4004.github.io/portfolio2/"

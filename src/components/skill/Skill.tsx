@@ -4,10 +4,18 @@ const Container = styled.li`
   display: flex;
   column-gap: 3vw;
   align-items: center;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    row-gap: 3vw;
+  }
 `
 const Img = styled.img`
   height: 3vw;
   width: 3vw;
+  @media (max-width: 1024px) {
+    height: 10vw;
+    width: 10vw;
+  }
 `
 const Name = styled.h3`
   font-size: 1vw;
@@ -15,12 +23,7 @@ const Name = styled.h3`
     content: "${props=>props.className}";
   }
   @media (max-width: 1024px) {
-    &.React-Native::before,&.Typescript::before{
-      display: none;
-    }
-    &.React-Native::after,&.Typescript::after{
-      content: "${props=>props.className==="React-Native"? "RN" : props.className==="Typescript"&&"TS"}";
-    }
+    font-size: 3vw;
   }
 `
 

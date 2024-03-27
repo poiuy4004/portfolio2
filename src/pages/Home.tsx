@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 
+import Header from "../components/layouts/Header";
 import Nav from "../components/layouts/Nav";
 import IntroContainer from "../containers/IntroContainer";
 import SkillContainer from "../containers/SkillContainer";
@@ -8,13 +9,12 @@ import ProjectContainer from "../containers/ProjectContainer";
 import ContactContainer from "../containers/ContactContainer";
 
 const Container = styled.main`
-  padding: 3vw 22vw;
+  padding: 0 22vw;
   display: flex;
   flex-direction: column;
   row-gap: 6vw;
-  &>article{
-    max-height: 100vh;
-    max-width: 100vw;
+  @media (max-width: 1024px) {
+    padding: 0 1vw;
   }
 `
 const NavBox = styled.article`
@@ -23,18 +23,23 @@ const NavBox = styled.article`
   left: 7vw;
   font-size: 3vw;
   font-weight: 100;
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `
 
 function Home() {
   const [isPage, setIsPage] = useState<number>(1);
   const [isProjectSection, setIsProjectSection] = useState<number>(1);
+
   return (
     <Container>
+      <Header isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} />
       <NavBox><Nav isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} /></NavBox>
-      <IntroContainer />
-      <SkillContainer />
-      <ProjectContainer isProjectSection={isProjectSection} />
-      <ContactContainer />
+      <IntroContainer isPage={isPage} setIsPage={setIsPage} />
+      <SkillContainer isPage={isPage} setIsPage={setIsPage} />
+      <ProjectContainer isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} />
+      <ContactContainer isPage={isPage} setIsPage={setIsPage} />
     </Container>
   );
 }

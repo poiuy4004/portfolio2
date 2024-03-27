@@ -2,21 +2,25 @@ import styled from "styled-components";
 import KakaoTalk from "../components/Kakaotalk";
 import { BlackCircleSvg, KakaotalkSvg, GithubSvg } from "../assets/svgs/contact";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Container = styled.section`
-  height: 100vh;
-  padding: 3% 0;
+  padding: 3vw 0;
+  height: 94vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  font-size: 6rem;
+  font-size: 5vw;
   font-weight: 700;
+  @media (max-width: 1024px) {
+    padding: 10vw 0;
+    font-size: 10vw;
+  }
 `
 const Name = styled.strong`
   color: black;
-  text-shadow: 0.25rem 0.25rem 0 rgba(0,128,0,0.3);
+  text-shadow: 0.2vw 0.2vw 0 rgba(0,128,0,0.3);
 `
 const TypingText = styled.div`
   display: flex;
@@ -24,7 +28,7 @@ const TypingText = styled.div`
   justify-content: left;
   text-align: left;
   align-items: center;
-  height: 7rem;
+  height: 7vw;
   &>div{
     position: absolute;
     visibility: hidden;
@@ -38,7 +42,7 @@ const TypingText = styled.div`
     animation: typing 3s infinite;
     content: "Frontend Developer Portfolio";
     @keyframes typing {
-      0%{content: ""; border-right: 0.8rem solid rgb(102, 102, 102);}
+      0%{content: ""; border-right: 0.8vw solid rgb(102, 102, 102);}
       1%{content: "F";}
       2%{content: "Fr";}
       3%{content: "Fro";}
@@ -57,34 +61,28 @@ const TypingText = styled.div`
       16%{content: "Frontend Develop";}
       17%{content: "Frontend Develope";}
       18%{content: "Frontend Developer";}
-      28%{content: "Frontend Developer"; width: min-content;border-right: 0.8rem solid rgb(102, 102, 102);}
-      33%{content: "Frontend Developer"; width: min-content;border-right: 0.8rem solid rgb(102, 102, 102);}
+      28%{content: "Frontend Developer"; width: min-content;border-right: 0.8vw solid rgb(102, 102, 102);}
+      33%{content: "Frontend Developer"; width: min-content;border-right: 0.8vw solid rgb(102, 102, 102);}
       34%{content: "Frontend Developer"; width: 100%; border:none;}
       70%{content: "Frontend Developer"; width: 100%; border:none;}
-      71%{content: "Frontend Developer"; width: 100%; border-right: 0.8rem solid rgb(102, 102, 102);}
-      80%{content: "Frontend Developer"; width: 0%; border-right: 0.8rem solid rgb(102, 102, 102);}
+      71%{content: "Frontend Developer"; width: 100%; border-right: 0.8vw solid rgb(102, 102, 102);}
+      80%{content: "Frontend Developer"; width: 0%; border-right: 0.8vw solid rgb(102, 102, 102);}
       81%{content: ""; width: min-content; border: none;}
       100%{content: ""; width: min-content; border: none;}
     }
-  }
-  @media (max-height: 888px),(max-width: 1280px) {
-    font-size: 3rem;
   }
 `
 
 const IconContainer = styled.div`
   display: flex;
-  justify-content: center;
   &>*{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 7rem;
-    height: 7rem;
-    margin: 2rem;
+    width: 7vw;
+    height: 7vw;
     cursor: pointer;
   }
-
   &>*>:first-child{
     position: absolute;
     width: 5vw;
@@ -92,83 +90,84 @@ const IconContainer = styled.div`
     animation: threeBorder 1s ease-in-out forwards;
     fill: gray;
     stroke-dasharray: 37;
+    stroke-width: .2vw;
     transition: all .2s ease-in-out;
   }
   &>*:hover>:first-child{
     fill: white;
-    stroke: rgb(0,128,0);
-    stroke-width: 5rem;
+    stroke-width: 3vw;
     transition: all .2s ease-in-out;
   }
   &>:nth-child(1):hover>:first-child{
+    stroke: red;
     animation: circleBorder 1s ease-in-out forwards, colorRed 1s linear forwards;
   }
   &>:nth-child(2):hover>:first-child{
+    stroke: yellow;
     animation: circleBorder 1s ease-in-out forwards, colorYellow 1s linear forwards;
   }
   &>:nth-child(3):hover>:first-child{
+    stroke: green;
     animation: circleBorder 1s ease-in-out forwards, colorGreen 1s linear forwards;
   }
   &>:nth-child(4):hover>:first-child{
+    stroke: blue;
     animation: circleBorder 1s ease-in-out forwards, colorBlue 1s linear forwards;
   }
   &>:nth-child(5):hover>:first-child{
+    stroke: black;
     animation: circleBorder 1s ease-in-out forwards, colorBlack 1s linear forwards;
   }
-
   &>*>:nth-child(2){
     position: absolute;
-    width: 7rem;
-    height: 7rem;
+    width: 7vw;
+    height: 7vw;
     color: white;
-    font-size: 3rem;
+    font-size: 2vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 0.3rem;
+    margin-bottom: 0.2vw;
   }
   &>:nth-child(2)>:nth-child(2){
     fill: yellow;
-    width: 7rem;
-    height: 7rem;
-    font-size: 1rem;
+    width: 7vw;
+    height: 7vw;
+    font-size: 1vw;
     &>*{
-      width: 2.7rem;
-      height: 2.7rem;
+      width: 1.8vw;
+      height: 1.8vw;
     }
   }
   &>:nth-child(2):hover>:nth-child(2){
     fill: black;
-    width: 7rem;
-    height: 7rem;
+    width: 7vw;
+    height: 7vw;
   }
 
   &>:nth-child(5)>:nth-child(2){
-    margin: 1rem 0 0 0.05rem;
-    height: 3.7rem;
-    width: 3.7rem;
+    margin: .5vw 0 0 0;
+    height: 2.4vw;
+    width: 2.4vw;
     fill: white;
   }
   &>:nth-child(5):hover>:nth-child(2){
     fill: black;
   }
-
   @keyframes threeBorder {
     0% {
       stroke: black;
       stroke-dasharray: 555;
-      stroke-width: 1rem;
     }
     100% {
       stroke: black;
       stroke-dasharray: 84;
-      stroke-width: 1rem;
     }
   }
   @keyframes circleBorder {
     100% {
       stroke-dasharray: 555;
-      stroke-width: 1rem;
+      stroke-width: .7vw;
     }
   }
   @keyframes colorRed {100% {stroke: red;}}
@@ -176,95 +175,57 @@ const IconContainer = styled.div`
   @keyframes colorBlue {100% {stroke: blue;}}
   @keyframes colorBlack {100% {stroke: black;}}
   @keyframes colorGreen {100% {stroke: green;}}
-  @media (max-height: 888px),(max-width: 1280px) {
+  @media (max-width: 1024px) {
+    &>:nth-child(4),&>:nth-child(5){
+      display: none;
+    }
     &>*{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 3rem;
-      height: 3rem;
-      margin: 1rem;
-      cursor: pointer;
+      width: 30vw;
+      height: 30vw;
     }
     &>*>:first-child{
-      position: absolute;
-      width: 3rem;
-      height: 3rem;
-      animation: threeBorder 1s ease-in-out forwards;
-      fill: none;
-      stroke-dasharray: 37;
-      transition: all .2s ease-in-out;
+      width: 20vw;
+      height: 20vw;
+      stroke-width: 1vw;
     }
     &>*:hover>:first-child{
-      fill: #fff;
-      stroke-width: 5rem;
-      transition: all .2s ease-in-out;
+      stroke-width: 24vw;
     }
-    &>:nth-child(1){display:none;}
-    &>:nth-child(5){display:none;}
-    &>:nth-child(1):hover>:first-child{
-      animation: circleBorder 1s ease-in-out forwards, colorRed 1s linear forwards;
-    }
-    &>:nth-child(2):hover>:first-child{
-      animation: circleBorder 1s ease-in-out forwards, colorYellow 1s linear forwards;
-    }
-    &>:nth-child(3):hover>:first-child{
-      animation: circleBorder 1s ease-in-out forwards, colorGreen 1s linear forwards;
-    }
-    &>:nth-child(4):hover>:first-child{
-      animation: circleBorder 1s ease-in-out forwards, colorBlue 1s linear forwards;
-    }
-    &>:nth-child(5):hover>:first-child{
-      animation: circleBorder 1s ease-in-out forwards, colorBlack 1s linear forwards;
-    }
-  
     &>*>:nth-child(2){
-      position: absolute;
-      width: 3rem;
-      height: 3rem;
-      color: white;
-      font-size: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 0.3rem;
+      width: 20vw;
+      height: 20vw;
+      font-size: 7vw;
     }
     &>:nth-child(2)>:nth-child(2){
-      fill: yellow;
-      width: 3rem;
-      height: 3rem;
-      font-size: 1rem;
+      width: 20vw;
+      height: 20vw;
+      font-size: 7vw;
       &>*{
-        width: 1rem;
-        height: 1rem;
+        width: 7vw;
+        height: 7vw;
       }
     }
     &>:nth-child(2):hover>:nth-child(2){
-      fill: black;
-      width: 3rem;
-      height: 3rem;
-    }
-  
-    &>:nth-child(5)>:nth-child(2){
-      margin: 0.3rem 0 0 0.05rem;
-      height: 1.4rem;
-      width: 1.4rem;
-      fill: white;
-    }
-    &>:nth-child(5):hover>:nth-child(2){
-      fill: black;
+      width: 20vw;
+      height: 20vw;
     }
   }
 `
-
-type ContactContainerType = {
-  
+type contactContainerType = {
+  isPage: number
+  setIsPage: (number: number) => void
 }
-function ContactContainer(){
+function ContactContainer({isPage,setIsPage}: contactContainerType){
   const [isModalOpen,setIsModalOpen] = useState(true);
 
+  const contactRef = useRef<HTMLElement>(null)
+  const observber = new IntersectionObserver(()=>{setIsPage(4)},{threshold: .8})
+  useEffect(()=>{
+    contactRef.current&&observber.observe(contactRef.current)
+  },[])
+
   return(
-    <Container id="contact">
+    <Container id="contact" ref={contactRef}>
       <div><Name>장용민</Name></div>
       <TypingText>
         <div>Frontend Developer</div>

@@ -11,6 +11,13 @@ const NavBox = styled.ul`
   &>:nth-child(3)>*{
     border-radius: 30px !important;
   }
+  @media (max-width: 1024px) {
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    column-gap: 7vw;
+    list-style: none;
+  }
 `
 const NavButton = styled.li`
   padding: 1vw !important;
@@ -24,6 +31,9 @@ const ProjectBox = styled.ul`
   &>:nth-child(${props=>(props.itemProp?.[0]==="3")? (props.itemProp?.[2]) : 99}){
     color: rgb(0, 0, 128);
     text-decoration: underline solid yellow 5px !important;
+  }
+  @media (max-width: 1024px) {
+    display: none;
   }
 `
 

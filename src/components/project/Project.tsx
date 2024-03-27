@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Container = styled.section`
@@ -10,6 +9,34 @@ const Container = styled.section`
   row-gap: 2vw;
   text-align: center;
   &>h2{font-size: 2vw;}
+  &>p{display: none;}
+  &>ul{display: none;}
+  @media (max-width: 1024px) {
+    height: 74vh;
+    width: 94vw;
+    padding: 3vw;
+    row-gap: 6vw;
+    &>h2{font-size: 10vw;}
+    &>p{
+      padding: 0 10vw;
+      display: flex;
+      text-align: left;
+      word-break: break-all;
+      word-spacing: 1vw;
+      font-size: 5vw;
+      font-weight: 500;
+      letter-spacing: .5vw;
+      line-height: 7vw;
+    }
+    &>ul{
+      flex: 1;
+      display: flex;
+      align-items: end;
+      padding: 7vw 3vw;
+      column-gap: 3vw;
+      list-style: none;
+    }
+  }
 `
 const ImageBox = styled.div`
   height: 37vw;
@@ -20,6 +47,10 @@ const ImageBox = styled.div`
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: contain;
+  @media (max-width: 1024px) {
+    height: 88vw;
+    width: 88vw;
+  }
 `
 const Box = styled.div`
   display: flex;
@@ -43,6 +74,15 @@ const Box = styled.div`
     &:active{
       color: black;
       background-color: rgb(128, 255, 128);
+    }
+  }
+  @media (max-width: 1024px) {
+    &>button{
+      display: none;
+    }
+    &>a>button{
+      padding: 2vw 3vw;
+      font-size: 5vw;
     }
   }
 `
@@ -72,11 +112,18 @@ const DetailBox = styled.p`
   }
 `
 const Skill = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50px;
   padding: .5vw 1vw;
   color: white;
   font-size: 1vw;
   background-color: rgb(0, 0, 114);
+  @media (max-width: 1024px) {
+    padding: 2vw 5vw;
+    font-size: 3vw;
+  }
 `
 const DetailImageBox = styled.div`
   flex: 1;
@@ -103,9 +150,12 @@ function Project({project}:projectType){
     <Container>
       <h2>{project.name}</h2>
       <ImageBox className={project.image} />
+      <p>
+        {project.detail}
+      </p>
       <Box>
         <button onClick={e=>setIsDetail(true)}>세부정보</button>
-        <Link to={project.linkUrl} target="_blank"><button>배포링크</button></Link>
+        <a href={project.linkUrl} target="_blank"><button>배포링크</button></a>
         {isDetail&&<DetailBox
           onClick={e=>setIsDetail(false)}
         >
@@ -118,6 +168,9 @@ function Project({project}:projectType){
           <desc>아무 곳이나 눌러서 뒤로가기</desc>
         </DetailBox>}
       </Box>
+      <ul>
+        {project.skill.map(skill=><Skill>{skill}</Skill>)}
+      </ul>
     </Container>
   )
 }

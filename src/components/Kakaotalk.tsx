@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { kakaoQrImg, profileImg, profileBackImg } from "../assets/images/kakaoImage";
 
 const Container = styled.section`
+  z-index: 999;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -27,6 +28,12 @@ const Box = styled.div`
   background-repeat: no-repeat;
   background-size: contain;
   & a{color: white;}
+  @media (max-width: 1024px) {
+    z-index: 999;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
 `
 const Header = styled.div`
   display: flex;
@@ -42,14 +49,21 @@ const Header = styled.div`
     font-weight: 100;
     cursor: pointer;
   }
+  @media (max-width: 1024px) {
+    font-size: 3vw;
+    padding: 0 3vw;
+    &>:first-child{
+      font-size: 10vw;
+    }
+  }
 `
 const IconBox = styled.div`
   display: flex;
+  column-gap: .5vw;
   &>*{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: .5vw;
     height: 1.5vw;
     width: 1.5vw;
     border: solid 1px white;
@@ -57,6 +71,13 @@ const IconBox = styled.div`
     cursor: pointer;
   }
   &>:nth-child(3){color: yellow;}
+  @media (max-width: 1024px) {
+    column-gap: 3vw;
+    &>*{
+      height: 7vw;
+      width: 7vw;
+    }
+  }
 `
 
 const Profile = styled.div`
@@ -64,9 +85,10 @@ const Profile = styled.div`
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  margin-bottom: 1.2vw;
+  margin-bottom: 1.8vw;
   &>img{
-    height: 7vw; width: 7vw;
+    height: 7vw;
+    width: 7vw;
     border-radius: 50%;
     margin-bottom: .3vw;
   }
@@ -74,6 +96,17 @@ const Profile = styled.div`
     color: white;
     font-size: 1vw;
     font-weight: 100;
+  }
+  @media (max-width: 1024px) {
+    margin-bottom: 10vw;
+    &>img{
+      height: 27vw;
+      width: 27vw;
+      margin-bottom: 1.4vw;
+    }
+    &>div{
+      font-size: 5vw;
+    }
   }
 `
 
@@ -99,6 +132,17 @@ const Footer = styled.div`
   }
   &>*>div{
     font-size: .8vw;
+  }
+  @media (max-width: 1024px) {
+    height: 27vw;
+    padding-bottom: 7vw;
+    &>*>i{
+      font-size: 5vw;
+      margin-bottom: 3vw;
+    }
+    &>*>div{
+      font-size: 3vw;
+    }
   }
 `
 

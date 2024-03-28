@@ -58,6 +58,7 @@ const Box = styled.section`
     overflow-y: hidden;
   }
   &>:last-child:hover{
+    z-index: 999;
     overflow-y: visible;
   }
   &>:last-child>ul{

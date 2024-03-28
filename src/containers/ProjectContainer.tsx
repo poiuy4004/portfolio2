@@ -50,8 +50,8 @@ const Box = styled.div`
     height: 74vh;
     width: 94vw;
     &>button{
-      width: 2.7vw;
-      font-size: 2vw;
+      width: 5vw;
+      font-size: 5vw;
     }
   }
 `

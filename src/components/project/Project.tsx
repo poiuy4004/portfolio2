@@ -10,7 +10,9 @@ const Container = styled.section`
   text-align: center;
   &>h2{font-size: 2vw;}
   &>p{display: none;}
-  &>ul{display: none;}
+  &>ul{
+    display: none;
+  }
   @media (max-width: 1024px) {
     height: 74vh;
     width: 94vw;
@@ -29,11 +31,11 @@ const Container = styled.section`
       line-height: 7vw;
     }
     &>ul{
-      flex: 1;
+      flex-wrap: wrap;
       display: flex;
       align-items: end;
       padding: 7vw 3vw;
-      column-gap: 3vw;
+      gap: 3vw;
       list-style: none;
     }
   }

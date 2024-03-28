@@ -73,32 +73,12 @@ const Box = styled.section`
   &>:last-child>ul>a{
     transform: rotateY(180deg);
   }
-  &>span{
-    display: none;
-  }
   @media (max-width: 1024px) {
     &>div{
       display: none;
     }
     &>h1{
       font-size: 7vw;
-    }
-    &>span{
-      z-index: -999;
-      left: 0;
-      right: 0;
-      position: absolute;
-      display: flex;
-      opacity: 24%;
-      animation: backgroundSlide linear 30s infinite;
-      @keyframes backgroundSlide {
-        0%{
-          transform: translateX(0);
-        }
-        100%{
-          transform: translateX(-${web.concat(app).length*330}%);
-        }
-      }
     }
   }
 `
@@ -111,6 +91,29 @@ const ImageContainer = styled.ul`
 const ImageBox = styled.li`
   display: flex;
   column-gap: 1.5vw;
+`
+const MobileBox = styled.span`
+  display: none;
+  @media (max-width: 1024px) {
+    z-index: -999;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    &>ul{
+      opacity: 24%;
+      animation: backgroundSlide linear 37s infinite;
+      @keyframes backgroundSlide {
+        0%{
+          transform: translateX(0);
+        }
+        100%{
+          transform: translateX(-${web.concat(app).length*700}%);
+        }
+      }
+    }
+  }
 `
 
 type introContainerType = {
@@ -126,11 +129,11 @@ function IntroContainer({isPage, setIsPage}: introContainerType){
   return(
     <Container id="intro" ref={introRef}>
       <Box>
-        <span>
+        <MobileBox>
           <ImageContainer>
             {web.concat(app).map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
           </ImageContainer>
-        </span>
+        </MobileBox>
         <h1>Frontend Developer YongMin</h1>
         <div>
           <ImageContainer>

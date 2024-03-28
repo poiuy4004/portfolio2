@@ -177,8 +177,8 @@ type kakaoType = {
 function Kakaotalk({setIsModalOpen}: kakaoType){
   const [isQROpen,setIsQROpen] = useState(false);
   return(
-    <Container onClick={e=>e.stopPropagation()}>
-      <Box>
+    <Container onClick={e=>{e.stopPropagation(); setIsModalOpen(false);}}>
+      <Box onClick={e=>e.stopPropagation()}>
         <Header>
           <div onClick={()=>setIsModalOpen(false)}>×</div>
           <IconBox>

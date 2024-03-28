@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
     font-family: "Gugi", "Round", "MarBoDan";
     background-color: rgb(234, 234, 234);
+    cursor: url(${process.env.PUBLIC_URL+"/cursor.ico"}),auto;
   }
   *{
     box-sizing: border-box;

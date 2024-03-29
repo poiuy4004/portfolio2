@@ -1,6 +1,7 @@
-import { theFirstEduImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, drLucidImg, gemmyImg } from "../assets/images/projectImage";
+import { thisPortfolioImg, theFirstEduImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, drLucidImg, gemmyImg } from "../assets/images/projectImage";
 
 const web = [
+  {name: "포트폴리오", image: thisPortfolioImg, detail: "현재 보고계시는 포트폴리오 입니다.", skill: ["React", "Github-Acttions", "Styled-Components", "Typescript"], linkUrl: "https://poiuy4004.github.io/portfolio2/"},
   {name: "더퍼스트에듀", image: theFirstEduImg, detail: "교육을 통해 더 나은 세상을 만드는 기업 '더퍼스트에듀'의 홈페이지 제작을 요청받아 솔로 프로젝트로 제작하였습니다.", skill: ["React", "AWS", "Styled-Components", "Zustand"], linkUrl: "https://thefirstedu.net"},
   {name: "(구)포트폴리오", image: portfolioImg, detail: "이전 버전의 포트폴리오 입니다.", skill: ["React", "Github-Acttions", "Styled-Components", "Zustand"], linkUrl: "https://poiuy4004.github.io/portfolio/"},
   {name: "뉴트리션코더스", image: nutritionImg, detail: "부트캠프에서 진행한 2차 팀 프로젝트로, 나만을 위한 맞춤 AI 식단 프로그램을 만들었습니다.", skill: ["React", "AWS", "Styled-Components", "Zustand"], linkUrl: "http://nutrients-coders.com/"},

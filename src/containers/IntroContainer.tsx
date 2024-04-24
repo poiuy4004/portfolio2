@@ -28,7 +28,7 @@ const Box = styled.section`
     overflow-y: hidden;
   }
   &>:nth-last-child(2):hover{
-    z-index: 99;
+    z-index: 9;
     left: 0;
     right: 0;
     overflow-y: visible;
@@ -40,7 +40,7 @@ const Box = styled.section`
     pointer-events: all;
   }
   &>:nth-last-child(2):hover>ul{
-    transform: rotateY(0);
+    transform: translateX(-27vw) rotateY(0);
     opacity: 100%;
   }
   &>h1{
@@ -92,6 +92,9 @@ const ImageContainer = styled.ul`
 const ImageBox = styled.li`
   display: flex;
   column-gap: 1.5vw;
+  &>img{
+    height: 94vh;
+  }
 `
 const MobileBox = styled.span`
   display: none;

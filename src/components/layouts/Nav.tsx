@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+const Container = styled.nav`
+  z-index: 99999;
+`
 const NavBox = styled.ul`
   & *{
     text-decoration: none;
@@ -45,7 +48,7 @@ type NavType = {
 }
 function Nav({isPage, setIsPage, isProjectSection, setIsProjectSection}:NavType){
   return(
-    <nav>
+    <Container>
       <NavBox className={String(isPage)}>
         <a href="#intro" onClick={e=>setIsPage(1)}><NavButton>Intro</NavButton></a>
         <a href="#skill" onClick={e=>setIsPage(2)}><NavButton>Skill</NavButton></a>
@@ -58,7 +61,7 @@ function Nav({isPage, setIsPage, isProjectSection, setIsProjectSection}:NavType)
         </NavButton></a>
         <a href="#contact" onClick={e=>setIsPage(4)}><NavButton>Contact</NavButton></a>
       </NavBox>
-    </nav>
+    </Container>
   )
 }
 export default Nav;

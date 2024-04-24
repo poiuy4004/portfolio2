@@ -18,6 +18,7 @@ const Container = styled.main`
   }
 `
 const NavBox = styled.article`
+  z-index: 9999;
   position: fixed;
   top: 7vh;
   left: 7vw;

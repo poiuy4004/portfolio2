@@ -28,7 +28,7 @@ const Box = styled.section`
     overflow-y: hidden;
   }
   &>:nth-last-child(2):hover{
-    z-index: 999;
+    z-index: 99;
     left: 0;
     right: 0;
     overflow-y: visible;
@@ -39,7 +39,7 @@ const Box = styled.section`
     transition: .8s;
     pointer-events: all;
   }
-  &>:nth-last-child(2)>ul:hover{
+  &>:nth-last-child(2):hover>ul{
     transform: rotateY(0);
     opacity: 100%;
   }

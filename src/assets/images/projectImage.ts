@@ -6,7 +6,8 @@ import stackOverflowImg from "./stackOverflow.png";
 import goldenCityImg from "./goldenCity.png";
 import ioImg from "./io.png";
 
+import armyJobImg from "./armyJob.png";
 import drLucidImg from "./drLucid.png";
 import gemmyImg from "./gemmy.png";
 
-export { thisPortfolioImg, theFirstEduImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, drLucidImg, gemmyImg };
+export { thisPortfolioImg, theFirstEduImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, armyJobImg, drLucidImg, gemmyImg };

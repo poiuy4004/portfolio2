@@ -112,19 +112,19 @@ function ProjectContainer({isPage,setIsPage,isProjectSection,setIsProjectSection
   return(
     <Outer id="project">
       <Container className={String(isProjectSection)}>
-        <Box ref={webRef}>
-          <ProjectBox className={String(isWebPageNumber)}>
-            {web.map(project=><Project project={project} />)}
-          </ProjectBox>
-          <LeftButton onClick={e=>isWebPageNumber-1>0? setIsWebPageNumber(isWebPageNumber-1) : setIsWebPageNumber(0)}>&lt;</LeftButton>
-          <RightButton className={String(isWebPageNumber)} onClick={e=>isWebPageNumber<web.length-1? setIsWebPageNumber(isWebPageNumber+1) : setIsWebPageNumber(web.length-1)}>&gt;</RightButton>
-        </Box>
         <Box ref={appRef}>
           <ProjectBox className={String(isAppPageNumber)}>
             {app.map(project=><Project project={project} />)}
           </ProjectBox>
           <LeftButton onClick={e=>isAppPageNumber-1>0? setIsAppPageNumber(isAppPageNumber-1) : setIsAppPageNumber(0)}>&lt;</LeftButton>
           <RightButton className={String(isAppPageNumber)} onClick={e=>isAppPageNumber<app.length-1? setIsAppPageNumber(isAppPageNumber+1) : setIsAppPageNumber(app.length-1)}>&gt;</RightButton>
+        </Box>
+        <Box ref={webRef}>
+          <ProjectBox className={String(isWebPageNumber)}>
+            {web.map(project=><Project project={project} />)}
+          </ProjectBox>
+          <LeftButton onClick={e=>isWebPageNumber-1>0? setIsWebPageNumber(isWebPageNumber-1) : setIsWebPageNumber(0)}>&lt;</LeftButton>
+          <RightButton className={String(isWebPageNumber)} onClick={e=>isWebPageNumber<web.length-1? setIsWebPageNumber(isWebPageNumber+1) : setIsWebPageNumber(web.length-1)}>&gt;</RightButton>
         </Box>
         <Box ref={ingRef}>
           <ProjectBox className={String(isIngPageNumber)}>

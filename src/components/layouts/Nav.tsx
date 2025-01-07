@@ -54,8 +54,8 @@ function Nav({isPage, setIsPage, isProjectSection, setIsProjectSection}:NavType)
         <a href="#skill" onClick={e=>setIsPage(2)}><NavButton>Skill</NavButton></a>
         <a href="#project" onClick={e=>setIsPage(3)}><NavButton>Project
           <ProjectBox itemProp={isPage+" "+isProjectSection}>
-            <NavButton onClick={e=>setIsProjectSection(1)}>Web</NavButton>
-            <NavButton onClick={e=>setIsProjectSection(2)}>App</NavButton>
+            <NavButton onClick={e=>setIsProjectSection(1)}>App</NavButton>
+            <NavButton onClick={e=>setIsProjectSection(2)}>Web</NavButton>
             <NavButton onClick={e=>setIsProjectSection(3)}>⋯ing</NavButton>
           </ProjectBox>
         </NavButton></a>

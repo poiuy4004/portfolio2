@@ -1,9 +1,10 @@
 {
   "files": {
     "main.css": "/portfolio2/static/css/main.db6c2a31.css",
-    "main.js": "/portfolio2/static/js/main.7de85698.js",
+    "main.js": "/portfolio2/static/js/main.04b1c103.js",
     "static/media/MarBoDan.ttf": "/portfolio2/static/media/MarBoDan.8b26299df0367b210311.ttf",
     "static/media/theFirstEdu.png": "/portfolio2/static/media/theFirstEdu.d66c121180014bb89eb9.png",
+    "static/media/theFirstEduM.png": "/portfolio2/static/media/theFirstEduM.197e4c4a02465d5e9bd1.png",
     "static/media/goldenCity.png": "/portfolio2/static/media/goldenCity.150a78343ab45e642140.png",
     "static/media/thisPortfolio.png": "/portfolio2/static/media/thisPortfolio.4e4f7994397f8db5d20e.png",
     "static/media/gemmy.png": "/portfolio2/static/media/gemmy.67661c2572ebf08709d9.png",
@@ -21,13 +22,13 @@
     "static/media/puzzleImg.png": "/portfolio2/static/media/puzzleImg.fc80d360f38c7aac2e8c.png",
     "index.html": "/portfolio2/index.html",
     "static/media/kakaotalk.svg": "/portfolio2/static/media/kakaotalk.ba0b78fa92b0ab277fc418c3330aea5a.svg",
-    "static/media/github.svg": "/portfolio2/static/media/github.db216992b27adb5d0b7d65de217fed96.svg",
-    "static/media/blackCicle.svg": "/portfolio2/static/media/blackCicle.94331aef7f9df6ba3502d57f54f3feb0.svg",
+    "static/media/github.svg": "/portfolio2/static/media/github.1a7e10c6a890afa4830a24ddf4f05b19.svg",
+    "static/media/blackCicle.svg": "/portfolio2/static/media/blackCicle.38ce6ed74f86bad7221a70a1038a33cc.svg",
     "main.db6c2a31.css.map": "/portfolio2/static/css/main.db6c2a31.css.map",
-    "main.7de85698.js.map": "/portfolio2/static/js/main.7de85698.js.map"
+    "main.04b1c103.js.map": "/portfolio2/static/js/main.04b1c103.js.map"
   },
   "entrypoints": [
     "static/css/main.db6c2a31.css",
-    "static/js/main.7de85698.js"
+    "static/js/main.04b1c103.js"
   ]
 }

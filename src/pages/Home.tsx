@@ -31,15 +31,14 @@ const NavBox = styled.article`
 
 function Home() {
   const [isPage, setIsPage] = useState<number>(1);
-  const [isProjectSection, setIsProjectSection] = useState<number>(1);
 
   return (
     <Container>
-      <Header isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} />
-      <NavBox><Nav isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} /></NavBox>
+      <Header isPage={isPage} setIsPage={setIsPage} />
+      <NavBox><Nav isPage={isPage} setIsPage={setIsPage} /></NavBox>
       <IntroContainer isPage={isPage} setIsPage={setIsPage} />
       <SkillContainer isPage={isPage} setIsPage={setIsPage} />
-      <ProjectContainer isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} />
+      <ProjectContainer isPage={isPage} setIsPage={setIsPage} />
       <ContactContainer isPage={isPage} setIsPage={setIsPage} />
     </Container>
   );

@@ -21,13 +21,11 @@ const Container = styled.header`
 type headerType = {
   isPage: number
   setIsPage: (newValue: number) => void
-  isProjectSection: number
-  setIsProjectSection: (newValue: number) => void
 }
-function Header({isPage, setIsPage, isProjectSection, setIsProjectSection}: headerType){
+function Header({isPage, setIsPage}: headerType){
   return(
     <Container>
-      <Nav isPage={isPage} setIsPage={setIsPage} isProjectSection={isProjectSection} setIsProjectSection={setIsProjectSection} />
+      <Nav isPage={isPage} setIsPage={setIsPage} />
     </Container>
   )
 }

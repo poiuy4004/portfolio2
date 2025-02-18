@@ -1,6 +1,4 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Routes, Route, HashRouter } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components';
 
 import Gugi from "./assets/fonts/Gugi.ttf";
@@ -47,14 +45,14 @@ const GlobalStyle = createGlobalStyle`
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <GlobalStyle />
       <Routes>
-        <Route path='/*' Component={Intro} />
         <Route path='/' Component={Intro} />
+        <Route path='/*' Component={Home} />
         <Route path='/home' Component={Home} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

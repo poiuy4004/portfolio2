@@ -5,6 +5,7 @@ import { logo_drlucidPng, logo_armyjobPng } from "../assets/images/projectImage"
 
 import Project from "../components/project/Project";
 
+import {all} from "../constants/project";
 
 const Container = styled.article`
   padding: 3vw 0;
@@ -12,17 +13,11 @@ const Container = styled.article`
     padding: 10vw 0; 
   }
 `
-const Box = styled.section`
-  min-height: 45vw;
-  @media (max-width: 1024px) {
-    min-height: 222vh;
-  }
-`
-const SelectProjectBox = styled.div`
+const SelectProjectBox = styled.ul`
   display: flex;
   justify-content: space-around;
 `
-const SelectProjectButton = styled.button`
+const SelectProjectButton = styled.li`
   width: 50px;
   height: 50px;
   display: flex;
@@ -30,6 +25,11 @@ const SelectProjectButton = styled.button`
   align-items: center;
   padding: 100;
   border-radius: 50%;
+  overflow: hidden;
+  &:hover{
+    transform: scale(120%);
+    transition: all.3s;
+  }
 `
 
 type ProjectContainerType = {
@@ -37,6 +37,7 @@ type ProjectContainerType = {
   setIsPage: (number: number) => void
 }
 function ProjectContainer({isPage,setIsPage}: ProjectContainerType){
+  const [isProject, setIsProject] = useState(0);
   const projectRef = useRef<HTMLDivElement>(null)
   const observber = new IntersectionObserver(()=>setIsPage(3),{threshold: .8})
   useEffect(()=>{
@@ -45,17 +46,14 @@ function ProjectContainer({isPage,setIsPage}: ProjectContainerType){
   return(
     <Container id="project" ref={projectRef}>
       <SelectProjectBox>
-        <SelectProjectButton style={{backgroundColor: "rgb(14,120,223)"}}><img width="55%" height="55%" src={logo_drlucidPng} style={{marginLeft: 3}} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
-        <SelectProjectButton><img width="100%" height="100%" src={logo_armyjobPng} /></SelectProjectButton>
+        {all.map((project,idx)=>(
+          <SelectProjectButton onClick={()=>setIsProject(idx)}><img width="100%" height="100%" src={project.icon} /></SelectProjectButton>
+        ))}
       </SelectProjectBox>
-      <Box>
-
-      </Box>
+      <Project project={all[isProject]} />
+      {/* {all.map(project=>(
+        <Project project={project} />
+      ))} */}
     </Container>
   )
 }

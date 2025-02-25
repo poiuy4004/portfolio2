@@ -51,9 +51,6 @@ function ProjectContainer({isPage,setIsPage}: ProjectContainerType){
         ))}
       </SelectProjectBox>
       <Project project={all[isProject]} />
-      {/* {all.map(project=>(
-        <Project project={project} />
-      ))} */}
     </Container>
   )
 }

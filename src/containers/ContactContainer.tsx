@@ -40,35 +40,16 @@ const TypingText = styled.div`
     white-space: pre;
     overflow: hidden;
     animation: typing 3s infinite;
-    content: "Frontend Developer Portfolio";
+    content: "Developer YongMin";
     @keyframes typing {
-      0%{content: ""; border-right: 0.8vw solid rgb(102, 102, 102);}
-      1%{content: "F";}
-      2%{content: "Fr";}
-      3%{content: "Fro";}
-      4%{content: "Fron";}
-      5%{content: "Front";}
-      6%{content: "Fronte";}
-      7%{content: "Fronten";}
-      8%{content: "Frontend";}
-      9%{content: "Frontend ";}
-      10%{content: "Frontend D";}
-      11%{content: "Frontend De";}
-      12%{content: "Frontend Dev";}
-      13%{content: "Frontend Deve";}
-      14%{content: "Frontend Devel";}
-      15%{content: "Frontend Develo";}
-      16%{content: "Frontend Develop";}
-      17%{content: "Frontend Develope";}
-      18%{content: "Frontend Developer";}
-      28%{content: "Frontend Developer"; width: min-content;border-right: 0.8vw solid rgb(102, 102, 102);}
-      33%{content: "Frontend Developer"; width: min-content;border-right: 0.8vw solid rgb(102, 102, 102);}
-      34%{content: "Frontend Developer"; width: 100%; border:none;}
-      70%{content: "Frontend Developer"; width: 100%; border:none;}
-      71%{content: "Frontend Developer"; width: 100%; border-right: 0.8vw solid rgb(102, 102, 102);}
-      80%{content: "Frontend Developer"; width: 0%; border-right: 0.8vw solid rgb(102, 102, 102);}
-      81%{content: ""; width: min-content; border: none;}
-      100%{content: ""; width: min-content; border: none;}
+      0%{width: 0%; border-right: 0.8vw solid rgb(102, 102, 102);}
+      25%{width: 100%; border-right: 0.8vw solid rgb(102, 102, 102);}
+      26%{border: none;}
+      77%{border: none;}
+      78%{width: 100%; border-right: 0.8vw solid rgb(102, 102, 102);}
+      90%{width: 0%; border-right: 0.8vw solid rgb(102, 102, 102);}
+      91%{border: none;}
+      100%{width: 0%; border: none;}
     }
   }
 `
@@ -228,7 +209,7 @@ function ContactContainer({isPage,setIsPage}: contactContainerType){
     <Container id="contact" ref={contactRef}>
       <div><Name>장용민</Name></div>
       <TypingText>
-        <div>Frontend Developer</div>
+        <div>Developer YongMin</div>
       </TypingText>
       <IconContainer>
         <a href="tel:010-7184-2594" target="_blank" rel="noreferrer noopener">

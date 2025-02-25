@@ -154,7 +154,7 @@ function IntroContainer({isPage, setIsPage}: introContainerType){
             {web.concat(app).map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
           </ImageContainer>
         </MobileBox>
-        <h1>Frontend Developer YongMin</h1>
+        <h1>Developer YongMin</h1>
         <div>
           <ImageContainer className="leftList">
             {web.map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}

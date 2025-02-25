@@ -16,6 +16,22 @@ const Box = styled.section`
   display: flex;
   justify-content: space-between;
   backface-visibility: visible;
+  &+h4{
+    display: none;
+  }
+  &:hover+h4{
+    z-index: 999;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,128,.5);
+  }
   &>div{
     position: absolute;
     transform-style: preserve-3d;
@@ -140,7 +156,7 @@ function IntroContainer({isPage, setIsPage}: introContainerType){
         </MobileBox>
         <h1>Frontend Developer YongMin</h1>
         <div>
-          <ImageContainer>
+          <ImageContainer className="leftList">
             {web.map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
           </ImageContainer>
         </div>
@@ -150,6 +166,9 @@ function IntroContainer({isPage, setIsPage}: introContainerType){
           </ImageContainer>
         </div>
       </Box>
+      <h4>
+        <desc>"Shift"를 누른 채로, 마우스 휠을 사용하여 가로스크롤을 사용할 수 있습니다. 클릭하여 관련 링크로 접속할 수 있습니다.</desc>
+      </h4>
     </Container>
   )
 }

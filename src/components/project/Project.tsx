@@ -11,9 +11,11 @@ const Container = styled.section`
   }
   &>h1{
     padding-bottom: 2vh;
+    text-align: center;
   }
 `
 const Box = styled.p`
+  position: relative;
   height: 90%;
   display: flex;
   justify-content: space-between;
@@ -25,6 +27,11 @@ const ImgBox = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1024px) {
+    position: absolute;
+    width: 100%;
+    opacity: .1;
+  }
 `
 const ContentBox = styled.div`
   width: 48%;
@@ -40,6 +47,14 @@ const ContentBox = styled.div`
   &>div>p{
     padding-left: .5vw;
     font-size: 1.2vw;
+  }
+  @media (max-width: 1024px) {
+    z-index: 99;
+    width: 100%;
+    &>div>p{
+      padding-left: .5vw;
+      font-size: 5vw;
+    }
   }
 `
 

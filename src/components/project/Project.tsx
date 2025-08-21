@@ -74,7 +74,7 @@ function Project({project}: projectType){
       <h1>{project.name}</h1>
       <Box>
       <ImgBox>
-        <img height="100%" src={project.image} style={{maxWidth: "100%",}} />
+        <img height="100%" src={project.image} alt="" style={{maxWidth: "100%",}} />
       </ImgBox>
       <ContentBox>
         <div>

@@ -183,14 +183,14 @@ function Kakaotalk({setIsModalOpen}: kakaoType){
           <div onClick={()=>setIsModalOpen(false)}>×</div>
           <IconBox>
             <i className="fa-solid fa-gift"></i>
-            <a href="https://toss.me/kjbank" target="_blank" className="fa-solid fa-won-sign"></a>
+            <a href="https://toss.me/kjbank" target="_blank" rel="noopener noreferrer" className="fa-solid fa-won-sign"></a>
             <i className="fa-solid fa-star"></i>
             <i className="fa-solid fa-ellipsis-vertical"></i>
           </IconBox>
         </Header>
         <div>
           <Profile>
-            <img src={profileImg} />
+            <img src={profileImg} alt="" />
             <div>장용민</div>
           </Profile>
           <Footer>
@@ -210,7 +210,7 @@ function Kakaotalk({setIsModalOpen}: kakaoType){
         </div>
         {isQROpen&&
           <QRBox>
-            <img src={kakaoQrImg} />
+            <img src={kakaoQrImg} alt="" />
             <button onClick={()=>setIsQROpen(false)}>QR 닫기</button>
           </QRBox>
         }

@@ -157,7 +157,7 @@ function Project({project}:projectType){
       </p>
       <Box>
         <button onClick={e=>setIsDetail(true)}>세부정보</button>
-        <a href={project.linkUrl} target="_blank"><button>배포링크</button></a>
+        <a href={project.linkUrl} target="_blank" rel="noopener noreferrer"><button>배포링크</button></a>
         {isDetail&&<DetailBox
           onClick={e=>setIsDetail(false)}
         >

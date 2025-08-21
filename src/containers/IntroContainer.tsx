@@ -151,18 +151,18 @@ function IntroContainer({isPage, setIsPage}: introContainerType){
       <Box>
         <MobileBox>
           <ImageContainer>
-            {web.concat(app).map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
+            {web.concat(app).map(project=><a href={project.linkUrl} target="_blank" rel="noopener noreferrer"><ImageBox><img src={project.image} alt="" /></ImageBox></a>)}
           </ImageContainer>
         </MobileBox>
         <h1>Developer YongMin</h1>
         <div>
           <ImageContainer className="leftList">
-            {web.map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
+            {web.map(project=><a href={project.linkUrl} target="_blank" rel="noopener noreferrer"><ImageBox><img src={project.image} alt="" /></ImageBox></a>)}
           </ImageContainer>
         </div>
         <div>
           <ImageContainer>
-            {app.map(project=><a href={project.linkUrl} target="_blank"><ImageBox><img src={project.image} /></ImageBox></a>)}
+            {app.map(project=><a href={project.linkUrl} target="_blank" rel="noopener noreferrer"><ImageBox><img src={project.image} alt="" /></ImageBox></a>)}
           </ImageContainer>
         </div>
       </Box>

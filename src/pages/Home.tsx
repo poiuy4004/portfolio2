@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Header from "../components/layouts/Header";
@@ -31,6 +31,10 @@ const NavBox = styled.article`
 
 function Home() {
   const [isPage, setIsPage] = useState<number>(1);
+
+  useEffect(()=>{
+    setTimeout(()=>setIsPage(1),100)
+  },[])
 
   return (
     <Container>

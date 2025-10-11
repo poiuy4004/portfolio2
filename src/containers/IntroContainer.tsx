@@ -37,6 +37,9 @@ const Box = styled.section`
     transform-style: preserve-3d;
     perspective: 0vw;
     height: 100vh;
+    &::-webkit-scrollbar{
+      display: none;
+    }
   }
   &>:nth-last-child(2){
     left: 0;

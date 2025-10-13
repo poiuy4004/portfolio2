@@ -9,8 +9,10 @@ import logo_gemmyPng from "./logo_gemmyPng.png";
 import logo_nutritionPng from "./logo_nutritionPng.png";
 import logo_stackoverflowPng from "./logo_stackoverflowPng.png";
 
+import konnect from "./konnect.png";
 import kjobslinkImg from "./kjobslinkPng.png";
 import kjobsGlobal from "./kjobsGlobalPng.png";
+import kjobs from "./kjobs.png";
 
 import thisPortfolioImg from "./thisPortfolio.png";
 import theFirstEduImg from "./theFirstEdu.png";
@@ -28,4 +30,4 @@ import gemmyImg from "./gemmy.png";
 export {
   profile_dragonPng,
   logo_kjobs, logo_armyjobPng, logo_thefirsteduPng, logo_drlucidPng, logo_gemmyPng, logo_nutritionPng, logo_stackoverflowPng,
-  kjobslinkImg, kjobsGlobal, thisPortfolioImg, theFirstEduImg, theFirstEduMImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, armyJobImg, drLucidImg, gemmyImg };
+  konnect, kjobslinkImg, kjobsGlobal, kjobs, thisPortfolioImg, theFirstEduImg, theFirstEduMImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, armyJobImg, drLucidImg, gemmyImg };

@@ -48,6 +48,37 @@ const ContentBox = styled.div`
     padding-left: .5vw;
     font-size: 1.2vw;
   }
+  &>:last-child{
+    align-items: center;
+  }
+  &>div{
+    &>button{
+      width: fit-content;
+      border: solid 1px rgba(0, 128, 0, .2);
+      border-radius: 14px;
+      background-color: rgba(0, 128, 0, .8);
+      &>a{
+        padding: 0 5vw;
+        color: white;
+        font-size: .7vw;
+        font-weight: 900;
+        text-decoration: none;
+      }
+    }
+    &>button:hover{
+      background-color: rgba(0, 128, 0, .5);
+      &>a{
+        color: black;
+      }
+    }
+    &>button:active{
+      border: none;
+      background-color: rgba(0, 128, 0, .2);
+      &>a{
+        color: black;
+      }
+    }
+  }
   @media (max-width: 1024px) {
     z-index: 99;
     width: 100%;
@@ -83,6 +114,11 @@ function Project({project}: projectType){
         <div>
           <h2>프로젝트 역할</h2>
           <p>{project.role}</p>
+        </div>
+        <div>
+          <button>
+          <a href={project.linkUrl} target="_blank"><div>L I N K</div></a>
+          </button>
         </div>
       </ContentBox>
       </Box>

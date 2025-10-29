@@ -8,6 +8,14 @@ const Container = styled.li`
     flex-direction: column;
     row-gap: 3vw;
   }
+  &>svg{
+    height: 3vw;
+    width: 3vw;
+    @media (max-width: 1024px) {
+      height: 10vw;
+      width: 10vw;
+    }
+  }
 `
 const Img = styled.img`
   height: 3vw;
@@ -36,7 +44,7 @@ type SkillType = {
 function Skill({skill}:SkillType){
   return(
     <Container>
-      <Img src={skill.imageUrl} alt="" />
+      <skill.imageUrl />
       <Name className={skill.name} />
     </Container>
   ) 

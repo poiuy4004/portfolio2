@@ -11,9 +11,9 @@ const NavBox = styled.ul`
     border-radius: 500px !important;
     background-color: rgba(0, 128, 0, .2) !important;
   }
-  &>:nth-child(3)>*{
+  /* &>:nth-child(3)>*{
     border-radius: 30px !important;
-  }
+  } */
   @media (max-width: 1024px) {
     height: 7vw;
     display: flex;

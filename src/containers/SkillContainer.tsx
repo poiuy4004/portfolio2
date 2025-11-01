@@ -57,7 +57,7 @@ const SkillBox = styled.ul`
   padding: 2vw;
   display: flex;
   flex-direction: column;
-  row-gap: 1vw;
+  row-gap: 2.5vh;
   list-style: none;
   @media (max-width: 1024px) {
     padding: 10vw 2vw;
@@ -67,7 +67,7 @@ const SkillBox = styled.ul`
   }
 `
 const OtherBox = styled(SkillBox)`
-  padding: 3vw;
+  padding: 3vw 1vw;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;

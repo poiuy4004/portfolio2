@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Container = styled.li`
   display: flex;
   flex-direction: column;
-  row-gap: 1vw;
+  row-gap: 1.8vh;
   align-items: center;
   @media (max-width: 1024px) {
     row-gap: 3vw;

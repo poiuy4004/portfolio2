@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const Container = styled.li`
   display: flex;
-  column-gap: 3vw;
+  column-gap: 2.5vw;
   align-items: center;
   @media (max-width: 1024px) {
     flex-direction: column;

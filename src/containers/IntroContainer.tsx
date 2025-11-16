@@ -19,18 +19,20 @@ const Box = styled.section`
   &+h4{
     display: none;
   }
-  &:hover+h4{
-    z-index: 999;
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    color: white;
-    background-color: rgba(0,0,128,.5);
+  @media (min-width: 1023px) {
+    &:hover+h4{
+      z-index: 999;
+      display: block;
+      width: 100%;
+      padding: 10px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+      color: white;
+      background-color: rgba(0,0,128,.5);
+    }
   }
   &>div{
     position: absolute;

@@ -1,5 +1,6 @@
 import profile_dragonPng from "./profile_dragonPng.png";
 
+import logoKonnect from "./logoKonnect.png";
 import logo_kjobs from "./logo_kjobsPng.png";
 import logo_armyjobPng from "./logo_armyjobPng.png";
 import logo_thefirsteduPng from "./logo_thefirsteduPng.png";
@@ -29,5 +30,5 @@ import gemmyImg from "./gemmy.png";
 
 export {
   profile_dragonPng,
-  logo_kjobs, logo_armyjobPng, logo_thefirsteduPng, logo_drlucidPng, logo_gemmyPng, logo_nutritionPng, logo_stackoverflowPng,
+  logoKonnect, logo_kjobs, logo_armyjobPng, logo_thefirsteduPng, logo_drlucidPng, logo_gemmyPng, logo_nutritionPng, logo_stackoverflowPng,
   konnect, kjobslinkImg, kjobsGlobal, kjobs, thisPortfolioImg, theFirstEduImg, theFirstEduMImg, portfolioImg, nutritionImg, stackOverflowImg, goldenCityImg, ioImg, armyJobImg, drLucidImg, gemmyImg };

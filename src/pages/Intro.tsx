@@ -12,6 +12,7 @@ const Container = styled.main`
 `
 const Skip = styled.button`
   height: 5vh;
+  min-width: 10vw;
   padding: .4vw;
   position: absolute;
   bottom: 1vh;
@@ -22,6 +23,12 @@ const Skip = styled.button`
   background-color: rgb(200, 200, 100);
   &:hover{
     background-color: rgb(200, 200, 0);
+  }
+  @media (max-width: 1024px) {
+    bottom: 33vh;
+    height: 5vh;
+    min-width: 30vw;
+    font-size: 3vw;
   }
 `
 

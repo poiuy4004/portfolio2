@@ -68,12 +68,10 @@ const SkillBox = styled.ul`
 `
 const OtherBox = styled(SkillBox)`
   padding: 3vw 1vw;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   @media (max-width: 1024px) {
     padding: 10vw 2vw;
-    column-gap: 5vw;
   }
 `
 type skillContainerType = {

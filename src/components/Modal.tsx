@@ -14,9 +14,10 @@ const Container = styled.article`
 `
 const Box = styled.section`
   padding: 2%;
-  height: 80%;
-  min-width: 50%;
-  max-width: 80%;
+  min-height: 55vh;
+  max-height: 80vh;
+  min-width: 50vw;
+  max-width: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

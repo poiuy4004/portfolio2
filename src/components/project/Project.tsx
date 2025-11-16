@@ -53,7 +53,7 @@ const ContentBox = styled.div`
   }
   &>div{
     &>button{
-      width: fit-content;
+      width: 5vw;
       border: solid 1px rgba(0, 128, 0, .2);
       border-radius: 14px;
       background-color: rgba(0, 128, 0, .8);
@@ -63,6 +63,12 @@ const ContentBox = styled.div`
         font-size: .7vw;
         font-weight: 900;
         text-decoration: none;
+      }
+      @media (max-width: 1024px) {
+        width: 30vw;
+        &>a{
+          font-size: 5vw;
+        }
       }
     }
     &>button:hover{
@@ -96,6 +102,7 @@ type projectType = {
     detail: string
     role: string
     skill: Array<string>
+    develop: string
     linkUrl: string
   }
 }

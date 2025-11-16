@@ -10,12 +10,13 @@ import {all} from "../constants/project";
 const Container = styled.article`
   padding: 3vw 0;
   @media (max-width: 1024px) {
-    padding: 10vw 0; 
+    padding: 12vw 0; 
   }
 `
 const SelectProjectBox = styled.ul`
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 3vh;
 `
 const SelectProjectButton = styled.li`
   width: 50px;
@@ -47,7 +48,11 @@ function ProjectContainer({isPage,setIsPage}: ProjectContainerType){
     <Container id="project" ref={projectRef}>
       <SelectProjectBox>
         {all.map((project,idx)=>(
-          <SelectProjectButton onClick={()=>setIsProject(idx)}><img width="100%" height="100%" src={project.icon} alt="" /></SelectProjectButton>
+          <SelectProjectButton
+           onClick={()=>setIsProject(idx)}
+          >
+            <img width="100%" height="100%" src={project.icon} alt="" />
+          </SelectProjectButton>
         ))}
       </SelectProjectBox>
       <Project project={all[isProject]} />

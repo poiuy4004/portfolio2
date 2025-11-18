@@ -1,14 +1,11 @@
 import styled from "styled-components";
 
 const Container = styled.section`
-  height: 37vw;
+  height: 77vh;
   margin-top: 3vh;
   padding: 3vh 2vw;
   border-radius: 14px;
   background-color: white;
-  @media (max-width: 1024px) {
-    height: 77vh;
-  }
   &>h1{
     padding-bottom: 2vh;
     text-align: center;
@@ -119,7 +116,7 @@ function Project({project}: projectType){
           <h2>{project.detail}</h2>
         </div>
         <div>
-          <h2>프로젝트 역할</h2>
+          <h2>프로젝트를 통해 배운 점</h2>
           <p>{project.role}</p>
         </div>
         <div>

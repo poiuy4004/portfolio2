@@ -67,7 +67,7 @@ const SkillBox = styled.ul`
   }
 `
 const OtherBox = styled(SkillBox)`
-  padding: 3vw 1vw;
+  padding: 2vw 1vw 3vw;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   @media (max-width: 1024px) {
